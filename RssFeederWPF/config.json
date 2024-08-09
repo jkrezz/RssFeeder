@@ -1,0 +1,26 @@
+{
+  "rssFeeds": [
+    {
+      "siteName": "Habr",
+      "rssUrl": "https://habr.com/rss/interesting/"
+    },
+    {
+      "siteName": "PenzaNews",
+      "rssUrl": "https://penzanews.ru/rss/"
+    },
+    {
+      "siteName": "lenta.ru",
+      "rssUrl": "https://lenta.ru/rss/google-newsstand/main/"
+    },
+    {
+      "siteName": "Clean Coder Blog",
+      "rssUrl": "http://blog.cleancoder.com/atom.xml"
+    }
+  ],
+  "updateIntervalSeconds": 30,
+  "proxySettings": {
+    "address": "",
+    "username": "",
+    "password": ""
+  }
+}

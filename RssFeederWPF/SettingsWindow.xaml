@@ -1,0 +1,33 @@
+﻿<Window x:Class="RssFeederWPF.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Настройки" Height="400" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <CheckBox x:Name="EnableProxyCheckBox" Content="Включить прокси" Margin="0,0,0,10" Checked="EnableProxyCheckBox_Checked" Unchecked="EnableProxyCheckBox_Unchecked"/>
+
+            <StackPanel x:Name="ProxySettingsPanel" Visibility="Collapsed" Margin="0,0,0,20">
+                <StackPanel>
+                    <TextBlock Text="Адрес прокси (http://IP:порт или IP:порт)" Margin="0,0,0,5"/>
+                    <TextBox x:Name="ProxyAddressTextBox" Width="300" Margin="0,0,0,5"/>
+                </StackPanel>
+                <CheckBox x:Name="UseProxyAuthCheckBox" Content="Использовать авторизацию" Margin="0,10,0,5" Checked="UseProxyAuthCheckBox_Checked" Unchecked="UseProxyAuthCheckBox_Unchecked"/>
+                <StackPanel x:Name="ProxyAuthPanel" Visibility="Collapsed">
+                    <StackPanel>
+                        <TextBlock Text="Имя пользователя" Margin="0,0,0,5"/>
+                        <TextBox x:Name="ProxyUsernameTextBox" Width="300" Margin="0,0,0,5"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="Пароль" Margin="0,0,0,5"/>
+                        <PasswordBox x:Name="ProxyPasswordBox" Width="300" Margin="0,0,0,5"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock Text="Частота обновления (секунды):" Margin="0,0,0,10"/>
+            <TextBox x:Name="UpdateIntervalTextBox" Width="100" />
+
+            <Button Content="Сохранить" Click="SaveSettings_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
